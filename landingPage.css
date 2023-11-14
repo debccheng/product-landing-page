@@ -1,0 +1,192 @@
+:root {
+    --default-font-color: #fff;
+    --default-font-size: 16px;
+    --description-font-color: #000;
+    --default-background-color:#333;
+    --default-font-family: "Trebuchet MS";
+}
+
+html {
+    color: var(--default-font-color);
+    font-size: var(--default-font-size);
+    font-family: var(--default-font-family);
+}
+
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--default-background-color);
+}
+
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+
+.navigation-bar {
+    text-align: center;
+    margin: 0 auto;
+    height: 80px;
+    /* border: 1rem solid; */
+}
+
+.navigation-bar img {
+    max-height: 100%;
+    /* border: 1rem solid; */
+}
+
+.navigation-bar ul {
+    padding: 50px;
+    margin: 0px;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    vertical-align:top;
+    /* border: 1rem solid; */
+}
+
+.navigation-bar ul li {
+    display: inline;
+    margin: 24px 48px;
+}
+
+.nav-main {
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--default-font-size);
+}
+
+.nav-main:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url("./Assets/heroHats.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+}
+
+.hero-text {
+    font-size: calc(var(--base-font-size)*2);
+    text-align: center;
+}
+
+.hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: #000;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Description */
+.description-container {
+    background-color: #fff;
+    color: var(--description-font-color);
+    padding: 12px;
+}
+
+.description-text {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    padding: 16px;
+}
+
+.footer-container {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer section {
+    margin: 8px;
+}
+
+.footer-main{
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--default-font-size);
+}
+
+.footer-main:hover {
+    text-decoration: underline;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        padding: 8px;
+    }
+
+    .hero {
+        padding: 16px;
+    }
+
+    .description {
+        padding: 16px;
+    }
+
+    footer section {
+        width: 100%;
+    }
+}
+
+/* Media query for tablet responsiveness */
+@media (max-width: 1024px) {
+    nav ul li {
+        margin: 0 4px;
+    }
+
+    .description {
+        padding: 8px;
+    }
+
+    footer section {
+        width: 100%; /* Use 100% for full width or adjust as needed */
+    }
+}
