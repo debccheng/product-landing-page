@@ -1,5 +1,3 @@
-/* week2 testing testing */
-
 :root {
     --default-font-color: #fff;
     --default-font-size: 16px;
@@ -85,12 +83,12 @@ body, ul {
 }
 
 .search-bar input {
-    padding: 8px 4px; /* Adjusted padding */
+    padding: 8px 4px;
     border: 1px solid #ccc;
 }
 
 .search-bar button {
-    padding: 8px 12px; /* Adjusted padding */
+    padding: 8px 12px;
     background-color: #ddd;
     border: none;
     cursor: pointer;
