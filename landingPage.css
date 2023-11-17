@@ -38,11 +38,15 @@ body, ul {
     text-align: center;
     margin: 0 auto;
     height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
     /* border: 1rem solid; */
 }
 
 .navigation-bar img {
-    max-height: 100%;
+    width: 100px;
     /* border: 1rem solid; */
 }
 
@@ -53,7 +57,6 @@ body, ul {
     text-align: center;
     display: inline-block;
     vertical-align:top;
-    /* border: 1rem solid; */
 }
 
 .navigation-bar ul li {
@@ -69,6 +72,33 @@ body, ul {
 
 .nav-main:hover {
     text-decoration: underline;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px 4px; /* Adjusted padding */
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 8px 12px; /* Adjusted padding */
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+    color: #fff;
 }
 
 /* Hero Section */
@@ -106,7 +136,7 @@ body, ul {
     border: none;
     outline: 0;
     display: inline-block;
-    padding: 10px 25px;
+    padding: 16px 24px;
     color: #000;
     background-color: #ddd;
     text-align: center;
@@ -157,24 +187,52 @@ footer section {
 
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
-    header {
+    .hero-text button {
+        padding: 4px 16px;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        background-color: var(--default-background-color);
+        position: absolute;
+        z-index: 100;
+        top: 90px;
+        left: 0;
+        right: 0;
+    }
+
+    .nav-items.show {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navigation-bar ul li {
+        display: inline;
+        margin: 0px;
+    }
+
+    .nav-items li {
+        margin: 0;
         text-align: center;
+        padding: 12px;
     }
 
-    nav ul {
-        padding: 8px;
-    }
-
-    .hero {
-        padding: 16px;
-    }
-
-    .description {
-        padding: 16px;
-    }
-
-    footer section {
-        width: 100%;
+    .nav-items li:hover {
+        text-decoration: underline;
     }
 }
 
@@ -189,6 +247,6 @@ footer section {
     }
 
     footer section {
-        width: 100%; /* Use 100% for full width or adjust as needed */
+        width: 100%;
     }
 }
